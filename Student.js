@@ -13,7 +13,7 @@ class Student extends React.Component {
                 <Text>Roll No: {this.props.rollNumber}</Text>
                 <Text>DOB: {this.props.dob}</Text>
                 <Text>Address: {this.props.address}</Text>
-                <Text>P.No: {this.props.phoneNumber}</Text>
+                <Text>Phone.No: {this.props.phoneNumber}</Text>
                 <Image
                     style={styles.tinyLogo}
                     source={{
