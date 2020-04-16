@@ -12,7 +12,7 @@ var studentsData = [
     dob: "22-07-1991",
     address: "Madhapur",
     phoneNumber: 8367623751,
-    photoUrl: 'https://reactnative.dev/img/tiny_logo.png'
+    photoUrl: require('./Vikram.jpg'),
   },
   {
     name: "Shiva",
@@ -20,7 +20,7 @@ var studentsData = [
     dob: "21-03-1990",
     address: "kalyan Nagar",
     phoneNumber: 1234567890,
-    photoUrl: 'https://reactnative.dev/img/tiny_logo.png'
+    photoUrl: require('./Vikram.jpg'),
   },
   {
     name: "Sai",
@@ -28,7 +28,7 @@ var studentsData = [
     dob: "25-04-1992",
     address: "Beeramguda",
     phoneNumber: 12345678,
-    photoUrl: 'https://reactnative.dev/img/tiny_logo.png'
+    photoUrl: require('./Vikram.jpg'),
   },
   {
     name: "Venkatesh",
@@ -36,7 +36,7 @@ var studentsData = [
     dob: "12-11-1998",
     address: "kalyan nagar",
     phoneNumber: 897872888,
-    photoUrl: 'https://d1kkg0o175tdyf.cloudfront.net/widget/p_f211c8aaf3db-2020-01-15-20-42-05-000473.jpg'
+    photoUrl: require('./Venkatesh.jpg'),
   },
   {
     name: "Venki",
@@ -44,7 +44,7 @@ var studentsData = [
     dob: "12-11-2000",
     address: "kalyan nagar",
     phoneNumber: 897872888,
-    photoUrl: 'https://reactnative.dev/img/tiny_logo.png'
+    photoUrl: require('./Vikram.jpg'),
   },
   {
     name: "Ram",
@@ -52,7 +52,7 @@ var studentsData = [
     dob: "12-11-1998",
     address: "kalyan nagar",
     phoneNumber: 897872888,
-    photoUrl: 'https://reactnative.dev/img/tiny_logo.png'
+    photoUrl: require('./Vikram.jpg'),
   },
   {
     name: "Sai Ram",
@@ -60,7 +60,7 @@ var studentsData = [
     dob: "12-11-1998",
     address: "kalyan nagar",
     phoneNumber: 8978728882,
-    photoUrl: 'https://reactnative.dev/img/tiny_logo.png'
+    photoUrl: require('./Vikram.jpg'),
   },
   {
     name: "Sravanthi",
@@ -68,7 +68,7 @@ var studentsData = [
     dob: "12-11-1998",
     address: "kalyan nagar",
     phoneNumber: 897872,
-    photoUrl: 'https://reactnative.dev/img/tiny_logo.png'
+    photoUrl: require('./Vikram.jpg'),
   },
   {
     name: "Raju",
@@ -76,7 +76,7 @@ var studentsData = [
     dob: "12-11-1998",
     address: "kalyan nagar",
     phoneNumber: 8978728882,
-    photoUrl: 'https://reactnative.dev/img/tiny_logo.png'
+    photoUrl: require('./Vikram.jpg'),
   },
   {
     name: "Rajesh",
@@ -84,7 +84,7 @@ var studentsData = [
     dob: "12-11-1998",
     address: "kalyan nagar",
     phoneNumber: 8978728882,
-    photoUrl: 'https://reactnative.dev/img/tiny_logo.png'
+    photoUrl: require('./Vikram.jpg'),
   },
   {
     name: "Santosh",
@@ -92,7 +92,7 @@ var studentsData = [
     dob: "12-11-1998",
     address: "kalyan nagar",
     phoneNumber: 1978728882,
-    photoUrl: 'https://reactnative.dev/img/tiny_logo.png'
+    photoUrl: require('./Vikram.jpg'),
   }
 ]
 
@@ -108,7 +108,7 @@ export default function App() {
         name={studentsData[0].name}
         rollNumber={studentsData[0].rollNumber}
         dob={studentsData[0].dob} address={studentsData[0].address}
-        phoneNumber={studentsData[0].phoneNumber} photoUrl={studentsData[0].photoUrl} />
+        phoneNumber={studentsData[0].phoneNumber} photoUrl={studentsData[0].photoUrl}/>
       <Student name={studentsData[1].name} rollNumber={studentsData[1].rollNumber} dob={studentsData[1].dob} address={studentsData[1].address} phoneNumber={studentsData[1].phoneNumber} photoUrl={studentsData[1].photoUrl} />
       <Student name={studentsData[2].name} rollNumber={studentsData[2].rollNumber} dob={studentsData[2].dob} address={studentsData[2].address} phoneNumber={studentsData[2].phoneNumber}photoUrl={studentsData[2].photoUrl} />
       <Student name={studentsData[3].name} rollNumber={studentsData[3].rollNumber} dob={studentsData[3].dob} address={studentsData[3].address} phoneNumber={studentsData[3].phoneNumber}photoUrl={studentsData[3].photoUrl} />

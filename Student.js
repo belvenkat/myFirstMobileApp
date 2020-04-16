@@ -16,9 +16,10 @@ class Student extends React.Component {
                 <Text>Phone Number: {this.props.phoneNumber}</Text>
                 <Image
                     style={styles.tinyLogo}
-                    source={{
-                        uri: this.props.photoUrl,
-                    }}
+                    // source={{
+                    //     uri: this.props.photoUrl,
+                    // }}
+                    source={this.props.photoUrl}
                 />
             </View>
 
