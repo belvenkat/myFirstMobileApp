@@ -7,92 +7,70 @@ import Student from "./Student"
 
 var studentsData = [
   {
-    name: "Vikram",
-    rollNumber: 1,
-    dob: "22-07-1991",
-    address: "Madhapur",
-    phoneNumber: 8367623751,
-    photoUrl: require('./Vikram.jpg'),
+    name: "Doberman",
+    lifespan : "9 – 13 years",
+    origin: "Germany",
+    photoUrl: require('./Doberman.jpg'),
   },
   {
-    name: "Shiva",
-    rollNumber: 2,
-    dob: "21-03-1990",
-    address: "kalyan Nagar",
-    phoneNumber: 1234567890,
-    photoUrl: require('./Vikram.jpg'),
+    name: "Gernam Shepherd",
+    lifespan : "10 – 13 years",
+    origin: "Germany",
+    photoUrl: require('./GermanShepherd.jpg'),
   },
   {
-    name: "Sai",
-    rollNumber: 3,
-    dob: "25-04-1992",
-    address: "Beeramguda",
-    phoneNumber: 12345678,
-    photoUrl: require('./Vikram.jpg'),
+    name: "Golden retriever",
+    lifespan : "10 – 12 years",
+    origin: "United Kingdom",
+    photoUrl: require('./GoldenRetriever.jpg'),
   },
   {
-    name: "Venkatesh",
-    rollNumber: 4,
-    dob: "12-11-1998",
-    address: "kalyan nagar",
-    phoneNumber: 897872888,
-    photoUrl: require('./Venkatesh.jpg'),
+    name: "Labrador Retriever",
+    lifespan : "10 – 14 years",
+    origin: "Newfoundland",
+    photoUrl: require('./LabradorRetriever.jpg'),
   },
   {
-    name: "Venki",
-    rollNumber: 5,
-    dob: "12-11-2000",
-    address: "kalyan nagar",
-    phoneNumber: 897872888,
-    photoUrl: require('./Vikram.jpg'),
+    name: "Pitbull",
+    lifespan : "8 – 15 years",
+    origin: "United Kingdom",
+    photoUrl: require('./Pitbull.jpg'),
   },
   {
-    name: "Ram",
-    rollNumber: 4,
-    dob: "12-11-1998",
-    address: "kalyan nagar",
-    phoneNumber: 897872888,
-    photoUrl: require('./Vikram.jpg'),
+    name: "Pomeranian",
+    lifespan : "12 – 16 years",
+    origin: "poland",
+    photoUrl: require('./Pomeranian.jpg'),
   },
   {
-    name: "Sai Ram",
-    rollNumber: 4,
-    dob: "12-11-1998",
-    address: "kalyan nagar",
-    phoneNumber: 8978728882,
-    photoUrl: require('./Vikram.jpg'),
+    name: "Poodle",
+    lifespan : "12 – 15 years",
+    origin: "france",
+    photoUrl: require('./Poodle.jpg'),
   },
   {
-    name: "Sravanthi",
-    rollNumber: 4,
-    dob: "12-11-1998",
-    address: "kalyan nagar",
-    phoneNumber: 897872,
-    photoUrl: require('./Vikram.jpg'),
+    name: "Pug",
+    lifespan : "12 – 15 years",
+    origin: "China",
+    photoUrl: require('./Pug.jpg'),
   },
   {
-    name: "Raju",
-    rollNumber: 4,
-    dob: "12-11-1998",
-    address: "kalyan nagar",
-    phoneNumber: 8978728882,
-    photoUrl: require('./Vikram.jpg'),
+    name: "Rottweiler",
+    lifespan : "8 – 10 years",
+    origin: "Germany",
+    photoUrl: require('./Rottweiler.jpg'),
   },
   {
-    name: "Rajesh",
-    rollNumber: 4,
-    dob: "12-11-1998",
-    address: "kalyan nagar",
-    phoneNumber: 8978728882,
-    photoUrl: require('./Vikram.jpg'),
+    name: "Syberian Husky",
+    lifespan : "12 – 15 years",
+    origin: "Siberia",
+    photoUrl: require('./SyberianHusky.jpg'),
   },
   {
-    name: "Santosh",
-    rollNumber: 4,
-    dob: "12-11-1998",
-    address: "kalyan nagar",
-    phoneNumber: 1978728882,
-    photoUrl: require('./Vikram.jpg'),
+    name: "Saint Bernard",
+    lifespan : "8 – 10 years",
+    origin: "Switzerland",
+    photoUrl: require('./SaintBernard.jpg'),
   }
 ]
 
@@ -102,24 +80,22 @@ var studentsData = [
 
 export default function App() {
   return (
-
-    <ScrollView contentContainerStyle={styles.container}>
-      <Student
-        name={studentsData[0].name}
-        rollNumber={studentsData[0].rollNumber}
-        dob={studentsData[0].dob} address={studentsData[0].address}
-        phoneNumber={studentsData[0].phoneNumber} photoUrl={studentsData[0].photoUrl}/>
-      <Student name={studentsData[1].name} rollNumber={studentsData[1].rollNumber} dob={studentsData[1].dob} address={studentsData[1].address} phoneNumber={studentsData[1].phoneNumber} photoUrl={studentsData[1].photoUrl} />
-      <Student name={studentsData[2].name} rollNumber={studentsData[2].rollNumber} dob={studentsData[2].dob} address={studentsData[2].address} phoneNumber={studentsData[2].phoneNumber}photoUrl={studentsData[2].photoUrl} />
-      <Student name={studentsData[3].name} rollNumber={studentsData[3].rollNumber} dob={studentsData[3].dob} address={studentsData[3].address} phoneNumber={studentsData[3].phoneNumber}photoUrl={studentsData[3].photoUrl} />
-      <Student name={studentsData[4].name} rollNumber={studentsData[4].rollNumber} dob={studentsData[4].dob} address={studentsData[4].address} phoneNumber={studentsData[4].phoneNumber}photoUrl={studentsData[4].photoUrl} />
-      <Student name={studentsData[5].name} rollNumber={studentsData[5].rollNumber} dob={studentsData[5].dob} address={studentsData[5].address} phoneNumber={studentsData[5].phoneNumber}photoUrl={studentsData[5].photoUrl} />
-      <Student name={studentsData[6].name} rollNumber={studentsData[6].rollNumber} dob={studentsData[6].dob} address={studentsData[6].address} phoneNumber={studentsData[6].phoneNumber}photoUrl={studentsData[6].photoUrl} />
-      <Student name={studentsData[7].name} rollNumber={studentsData[7].rollNumber} dob={studentsData[7].dob} address={studentsData[7].address} phoneNumber={studentsData[7].phoneNumber}photoUrl={studentsData[7].photoUrl} />
-      <Student name={studentsData[8].name} rollNumber={studentsData[8].rollNumber} dob={studentsData[8].dob} address={studentsData[8].address} phoneNumber={studentsData[8].phoneNumber}photoUrl={studentsData[8].photoUrl} />
-      <Student name={studentsData[9].name} rollNumber={studentsData[9].rollNumber} dob={studentsData[9].dob} address={studentsData[9].address} phoneNumber={studentsData[9].phoneNumber}photoUrl={studentsData[9].photoUrl} />
-      <Student name={studentsData[10].name} rollNumber={studentsData[10].rollNumber} dob={studentsData[10].dob} address={studentsData[10].address} phoneNumber={studentsData[10].phoneNumber}photoUrl={studentsData[10].photoUrl} />
+    <View contentContainerStyle={styles.container}> 
+    <ScrollView>
+      <Student name={studentsData[1].name} lifespan ={studentsData[1].lifespan } origin={studentsData[1].origin} photoUrl={studentsData[1].photoUrl} />
+      <Student name={studentsData[0].name} lifespan ={studentsData[0].lifespan } origin={studentsData[0].origin} photoUrl={studentsData[0].photoUrl}/>
+      <Student name={studentsData[2].name} lifespan ={studentsData[2].lifespan } origin={studentsData[2].origin} photoUrl={studentsData[2].photoUrl} />
+      <Student name={studentsData[3].name} lifespan ={studentsData[3].lifespan } origin={studentsData[3].origin} photoUrl={studentsData[3].photoUrl} />
+      <Student name={studentsData[4].name} lifespan ={studentsData[4].lifespan } origin={studentsData[4].origin} photoUrl={studentsData[4].photoUrl} />
+      <Student name={studentsData[5].name} lifespan ={studentsData[5].lifespan } origin={studentsData[5].origin} photoUrl={studentsData[5].photoUrl} />
+      <Student name={studentsData[6].name} lifespan ={studentsData[6].lifespan } origin={studentsData[6].origin} photoUrl={studentsData[6].photoUrl} />
+      <Student name={studentsData[7].name} lifespan ={studentsData[7].lifespan } origin={studentsData[7].origin} photoUrl={studentsData[7].photoUrl} />
+      <Student name={studentsData[8].name} lifespan ={studentsData[8].lifespan } origin={studentsData[8].origin} photoUrl={studentsData[8].photoUrl} />
+      <Student name={studentsData[9].name} lifespan ={studentsData[9].lifespan } origin={studentsData[9].origin} photoUrl={studentsData[9].photoUrl} />
+      <Student name={studentsData[10].name} lifespan ={studentsData[10].lifespan } origin={studentsData[10].origin} photoUrl={studentsData[10].photoUrl} />
     </ScrollView>
+    </View>
+    
 
 
   );

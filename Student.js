@@ -1,5 +1,5 @@
-import React from 'react'
-import { View, Text, StyleSheet, Image } from 'react-native'
+import React, { cloneElement } from 'react'
+import { View, Text, StyleSheet, Image,Button,Alert } from 'react-native'
 
 
 class Student extends React.Component {
@@ -18,14 +18,16 @@ class Student extends React.Component {
                 />
                 <View>
                     <Text style={styles.title}>{this.props.name}</Text>
-                    <Text style={styles.detail}>{this.props.rollNumber}</Text>
                 </View>
                 <View>
-                    <Text style={styles.detail}>DOB: {this.props.dob}</Text>
-                    <Text style={styles.detail}>Address: {this.props.address}</Text>
-                    <Text style={styles.detail}>Phone Number: {this.props.phoneNumber}</Text>
+                    <Text style={styles.detail}>LifeSpan: {this.props.lifespan }</Text>
+                    <Text style={styles.detail}>Origin: {this.props.origin}</Text>
+                <Button
+                        title="Press me"
+                        onPress={() => Alert.alert('Hello i am')}
+                />
                 </View>
-            </View>
+                </View>
 
 
 
@@ -38,22 +40,12 @@ export default Student
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: 10,
-        marginBottom: 10,
-        backgroundColor: '#ebeae8',
-        borderRadius: 10,
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 7,
-        },
-        shadowOpacity: 0.41,
-        shadowRadius: 9.11,
-
-        elevation: 14,
-
-    },
+        paddingTop: 10,
+        paddingLeft:500
+      },
     photo: {
+        borderRadius:20,
+        marginBottom:20,
         width: 300,
         height: 200
     },
@@ -64,7 +56,7 @@ const styles = StyleSheet.create({
         marginTop: 10
     },
     detail: {
-        color: 'gray',
+        color: 'black',
         textAlign: 'center',
         marginTop: 10,
         fontSize: 15
