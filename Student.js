@@ -1,4 +1,4 @@
-import React, { cloneElement } from 'react'
+import React from 'react'
 import { View, Text, StyleSheet, Image,Button,Alert } from 'react-native'
 
 
@@ -40,8 +40,8 @@ export default Student
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 10,
-        paddingLeft:500
+      //  paddingTop: 10,
+     //   paddingLeft:500
       },
     photo: {
         borderRadius:20,
