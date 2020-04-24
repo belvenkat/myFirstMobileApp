@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, View, Text, Dimensions, Button, Alert, TextComponent, Image } from 'react-native';
+import { StyleSheet, View, Text, Dimensions, Button, Alert, TouchableHighlight, Image } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -19,7 +20,9 @@ export default function UiCard() {
                                 }}
                             />
                         </View>
-                        <View style={venkyStyles.threeDotMenu}></View>
+                        <View style={venkyStyles.threeDotMenu}>
+                            <Icon style={venkyStyles.iconStyles} name="ellipsis-v" size={30}></Icon>
+                        </View>
                     </View>
 
 
@@ -32,7 +35,7 @@ export default function UiCard() {
                     <View style={venkyStyles.thirdView}>
                         <View style={venkyStyles.thirdViewLeftSide}>
                             <Text style={venkyStyles.noOfFollowrs}>250</Text>
-                            <Text style={venkyStyles.Followrs}>Followrs</Text>
+                            <Text style={venkyStyles.Followrs}>Followers</Text>
                         </View>
                         <View style={venkyStyles.thirdViewRightSide}>
                             <Text style={venkyStyles.noOfFollowrs}>150</Text>
@@ -42,10 +45,12 @@ export default function UiCard() {
 
 
                     <View style={venkyStyles.fourthView}>
-                        <Button
-                            title="FOLLOW"
+                        <TouchableHighlight style={venkyStyles.buttonStyles}
+                           // title="FOLLOW"
                             onPress={() => Alert.alert('Thank you for following...')}
-                        />
+                        >
+                             <Text style={venkyStyles.buttonText}>Follow</Text>
+                        </TouchableHighlight>
                     </View>
                 </View>
             </View>
@@ -118,8 +123,22 @@ var venkyStyles = StyleSheet.create({
         color: 'gray'
     },
     fourthView: {
+        alignItems:'center',
         flex: 1,
         //backgroundColor: 'violet'
+    },
+    buttonStyles:{
+        justifyContent:'center',
+        alignItems:"center",
+        borderRadius:20,
+        height:40,
+        width:250,
+       // backgroundColor:'red',
+        borderColor: 'lightblue',
+        borderWidth: 4
+    },
+    buttonText:{
+        color:'#63fff2'
     },
     imageView: {
         justifyContent:'center',
@@ -128,8 +147,13 @@ var venkyStyles = StyleSheet.create({
        // backgroundColor: 'yellow'
     },
     threeDotMenu: {
+        alignItems:'center',
+        marginTop:20,
         flex: 1,
         //backgroundColor: 'violet'
+    },
+    iconStyles:{
+        color:'black'
     },
     thirdViewLeftSide: {
         flex: 1,
