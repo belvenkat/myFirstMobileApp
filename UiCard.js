@@ -138,7 +138,8 @@ var venkyStyles = StyleSheet.create({
         borderWidth: 4
     },
     buttonText:{
-        color:'#63fff2'
+        fontWeight:'bold',
+        color:'lightblue'
     },
     imageView: {
         justifyContent:'center',

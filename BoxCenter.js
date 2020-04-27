@@ -73,8 +73,8 @@ var venkyStyles = StyleSheet.create({
     backgroundColor: 'tan'
   },
   bottomRight: {
-    justifyContent:"flex-end",
-    alignItems:"flex-end",
+    justifyContent:'flex-end',
+    alignItems:'flex-end',
     flex: 1,
     backgroundColor: 'lightblue'
   },

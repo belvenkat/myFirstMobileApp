@@ -7,6 +7,10 @@ import Student from "./Student"
 import PetCard from "./PetCard"
 import CollorPallet from './ColorPallet';
 import BoxCenter from './BoxCenter';
+import Boxes from './Boxes';
+import GetData from './GetData'
+import UiCard from './UiCard';
+import SecondUiSampleCard from './SecondUiSampleCard';
 
 
 
@@ -17,7 +21,8 @@ import BoxCenter from './BoxCenter';
 export default function App() {
   return (
     <View>
-      <BoxCenter></BoxCenter>
+     <SecondUiSampleCard></SecondUiSampleCard>
+    
     </View>
   );
 }
