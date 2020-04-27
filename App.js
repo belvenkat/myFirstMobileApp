@@ -11,6 +11,7 @@ import Boxes from './Boxes';
 import GetData from './GetData'
 import UiCard from './UiCard';
 import SecondUiSampleCard from './SecondUiSampleCard';
+import ThirdUiSampleCard from './ThirdUiSampleCard';
 
 
 
@@ -21,7 +22,7 @@ import SecondUiSampleCard from './SecondUiSampleCard';
 export default function App() {
   return (
     <View>
-     <SecondUiSampleCard></SecondUiSampleCard>
+     <ThirdUiSampleCard></ThirdUiSampleCard>
     
     </View>
   );
