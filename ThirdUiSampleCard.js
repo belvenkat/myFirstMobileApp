@@ -66,15 +66,15 @@ var venkyStyles = StyleSheet.create({
     Container: {
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'green',
+        backgroundColor: 'coral',
         height: windowHeight,
         width: windowWidth
     },
     mainContainer: {
         borderRadius: 10,
         backgroundColor: 'white',
-        height: 300,
-        width: 500,
+        height: windowHeight/2.55,
+        //width: windowWidth,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,

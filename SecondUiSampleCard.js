@@ -11,7 +11,6 @@ export default function SecondUiSampleCard() {
     return (
         <View style={venkyStyles.container}>
             <View style={venkyStyles.mainContainer}>
-                <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']}>
                 <View style={venkyStyles.mainContainerFirstLayer}>
                     <View style={venkyStyles.mainContainerFirstLayerTextView}>
                         <Text style={venkyStyles.textStyle}>    Ink.to.ipad</Text>
@@ -74,7 +73,6 @@ export default function SecondUiSampleCard() {
                    <View style={venkyStyles.dot} />
                    <View style={venkyStyles.dot} />
                 </View>
-                </LinearGradient>
                 <View style={venkyStyles.mainContainerFourthLayer}>
 
                     <View style={venkyStyles.postDetailsContainer}>
