@@ -6,26 +6,35 @@ const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 
+function renderPostDetailContainer(count, countText) {
+    return (
+        <View style={venkyStyles.postDetailsContainers}>
+            <View style={venkyStyles.postDetailsAligniteams}>
+                <Text style={venkyStyles.postCount}>{count}</Text>
+                <Text style={venkyStyles.postDetails}>{countText}</Text>
+            </View>
+        </View>
+    )
+}
+function renderImage(imagePath,imageStyle) {
+    return (
+        <Image
+            style={imageStyle}
+            source={{
+                uri: imagePath,
+            }}
+        />
+    )
+}
 export default function ThirdUiSampleCard() {
     return (
         <View>
             <View style={venkyStyles.Container}>
                 <View style={venkyStyles.mainContainer}>
-
                     <View style={venkyStyles.firstLayer}>
-                        <Image
-                            style={venkyStyles.tinyLogo}
-                            source={{
-                                uri: 'https://1.bp.blogspot.com/-8dlm0TpcwfI/VIeY_BT5E-I/AAAAAAAAHxw/TShiR220lj4/s1600/venkatesh.jpg',
-                            }}
-                        />
+                        {renderImage('https://1.bp.blogspot.com/-8dlm0TpcwfI/VIeY_BT5E-I/AAAAAAAAHxw/TShiR220lj4/s1600/venkatesh.jpg', venkyStyles.tinyLogo)}
                         <View style={venkyStyles.photo}>
-                            <Image
-                                style={venkyStyles.profilePic}
-                                source={{
-                                    uri: 'https://d1kkg0o175tdyf.cloudfront.net/widget/p_f211c8aaf3db-2020-01-15-20-42-05-000473.jpg',
-                                }}
-                            />
+                            {renderImage('https://d1kkg0o175tdyf.cloudfront.net/widget/p_f211c8aaf3db-2020-01-15-20-42-05-000473.jpg', venkyStyles.profilePic)}
                         </View>
                     </View>
                     <View style={venkyStyles.secondLayer}>
@@ -36,24 +45,9 @@ export default function ThirdUiSampleCard() {
                         </View>
                     </View>
                     <View style={venkyStyles.thirdLayer}>
-                        <View style={venkyStyles.postDetailsContainers}>
-                            <View style={venkyStyles.postDetailsAligniteams}>
-                                <Text style={venkyStyles.postCount}>1,201</Text>
-                                <Text style={venkyStyles.postDetails}>Tweets</Text>
-                            </View>
-                        </View>
-                        <View style={venkyStyles.postDetailsContainers}>
-                            <View style={venkyStyles.postDetailsAligniteams}>
-                                <Text style={venkyStyles.postCount}>113</Text>
-                                <Text style={venkyStyles.postDetails}>Following</Text>
-                            </View>
-                        </View>
-                        <View style={venkyStyles.postDetailsContainers}>
-                            <View style={venkyStyles.postDetailsAligniteams}>
-                                <Text style={venkyStyles.postCount}>1,026</Text>
-                                <Text style={venkyStyles.postDetails}>Followers</Text>
-                            </View>
-                        </View>
+                        {renderPostDetailContainer('1,234', 'tweets')}
+                        {renderPostDetailContainer('1000', 'Following')}
+                        {renderPostDetailContainer('1023', 'Followers')}
                     </View>
                 </View>
             </View>
@@ -73,8 +67,7 @@ var venkyStyles = StyleSheet.create({
     mainContainer: {
         borderRadius: 10,
         backgroundColor: 'white',
-        height: windowHeight/2.55,
-        //width: windowWidth,
+        height: windowHeight / 2.55,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -82,7 +75,6 @@ var venkyStyles = StyleSheet.create({
         },
         shadowOpacity: 0.30,
         shadowRadius: 4.65,
-
         elevation: 8,
     },
     firstLayer: {
@@ -152,5 +144,4 @@ var venkyStyles = StyleSheet.create({
         top: 120,
         left: 200
     }
-
 })
