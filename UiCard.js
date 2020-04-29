@@ -5,6 +5,15 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
+function renderPostDetails(Views,postCount,postDetails) {
+    return (
+        <View style={Views}>
+            <Text style={venkyStyles.noOfFollowrs}>{postCount}</Text>
+            <Text style={venkyStyles.Followrs}>{postDetails}</Text>
+        </View>
+    )
+}
+
 
 export default function UiCard() {
     return (
@@ -33,23 +42,25 @@ export default function UiCard() {
 
 
                     <View style={venkyStyles.thirdView}>
-                        <View style={venkyStyles.thirdViewLeftSide}>
+                        {renderPostDetails(venkyStyles.thirdViewLeftSide,250,'Followrs')}
+                        {renderPostDetails(venkyStyles.thirdViewRightSide,150,'Following')}
+                        {/* <View style={venkyStyles.thirdViewLeftSide}>
                             <Text style={venkyStyles.noOfFollowrs}>250</Text>
                             <Text style={venkyStyles.Followrs}>Followers</Text>
                         </View>
                         <View style={venkyStyles.thirdViewRightSide}>
                             <Text style={venkyStyles.noOfFollowrs}>150</Text>
                             <Text style={venkyStyles.Followrs}>Following</Text>
-                        </View>
+                        </View> */}
                     </View>
 
 
                     <View style={venkyStyles.fourthView}>
                         <TouchableHighlight style={venkyStyles.buttonStyles}
-                           // title="FOLLOW"
+                            // title="FOLLOW"
                             onPress={() => Alert.alert('Thank you for following...')}
                         >
-                             <Text style={venkyStyles.buttonText}>Follow</Text>
+                            <Text style={venkyStyles.buttonText}>Follow</Text>
                         </TouchableHighlight>
                     </View>
                 </View>
@@ -68,9 +79,9 @@ var venkyStyles = StyleSheet.create({
         backgroundColor: 'tan'
     },
     tinyLogo: {
-        height:200,
+        height: 200,
         width: 200,
-        borderRadius:100
+        borderRadius: 100
     },
     box: {
         height: windowHeight,
@@ -87,11 +98,11 @@ var venkyStyles = StyleSheet.create({
     firstView: {
         flexDirection: "row",
         flex: 4,
-       // backgroundColor: 'black'
+        // backgroundColor: 'black'
     },
     secondView: {
         flex: 1,
-       // backgroundColor: 'red'
+        // backgroundColor: 'red'
     },
     name: {
         marginTop: 20,
@@ -108,7 +119,7 @@ var venkyStyles = StyleSheet.create({
     thirdView: {
         flexDirection: 'row',
         flex: 1,
-       // backgroundColor: 'yellow'
+        // backgroundColor: 'yellow'
     },
     noOfFollowrs: {
         marginTop: 20,
@@ -123,42 +134,42 @@ var venkyStyles = StyleSheet.create({
         color: 'gray'
     },
     fourthView: {
-        alignItems:'center',
+        alignItems: 'center',
         flex: 1,
         //backgroundColor: 'violet'
     },
-    buttonStyles:{
-        justifyContent:'center',
-        alignItems:"center",
-        borderRadius:20,
-        height:40,
-        width:250,
-       // backgroundColor:'red',
+    buttonStyles: {
+        justifyContent: 'center',
+        alignItems: "center",
+        borderRadius: 20,
+        height: 40,
+        width: 250,
+        // backgroundColor:'red',
         borderColor: 'lightblue',
         borderWidth: 4
     },
-    buttonText:{
-        fontWeight:'bold',
-        color:'lightblue'
+    buttonText: {
+        fontWeight: 'bold',
+        color: 'lightblue'
     },
     imageView: {
-        justifyContent:'center',
-        alignItems:'center',
+        justifyContent: 'center',
+        alignItems: 'center',
         flex: 5,
-       // backgroundColor: 'yellow'
+        // backgroundColor: 'yellow'
     },
     threeDotMenu: {
-        alignItems:'center',
-        marginTop:20,
+        alignItems: 'center',
+        marginTop: 20,
         flex: 1,
         //backgroundColor: 'violet'
     },
-    iconStyles:{
-        color:'black'
+    iconStyles: {
+        color: 'black'
     },
     thirdViewLeftSide: {
         flex: 1,
-       // backgroundColor: 'blue'
+        // backgroundColor: 'blue'
     },
     thirdViewRightSide: {
         flex: 1,
