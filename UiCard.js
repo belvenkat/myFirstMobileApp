@@ -5,12 +5,18 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-function renderPostDetails(Views,postCount,postDetails) {
+function renderPostDetails(Views, postCount, postDetails) {
     return (
         <View style={Views}>
             <Text style={venkyStyles.noOfFollowrs}>{postCount}</Text>
             <Text style={venkyStyles.Followrs}>{postDetails}</Text>
         </View>
+    )
+}
+
+function renderText(textToRender) {
+    return (
+        <Text style={venkyStyles.personDetail}>{textToRender} </Text>
     )
 }
 
@@ -33,31 +39,16 @@ export default function UiCard() {
                             <Icon style={venkyStyles.iconStyles} name="ellipsis-v" size={30}></Icon>
                         </View>
                     </View>
-
-
                     <View style={venkyStyles.secondView}>
-                        <Text style={venkyStyles.name}>Venkatesh Belday</Text>
-                        <Text style={venkyStyles.place}>Hyderabad</Text>
+                        {renderText('Venkatesh Belday')}
+                        {renderText('Hyderabad')}
                     </View>
-
-
                     <View style={venkyStyles.thirdView}>
-                        {renderPostDetails(venkyStyles.thirdViewLeftSide,250,'Followrs')}
-                        {renderPostDetails(venkyStyles.thirdViewRightSide,150,'Following')}
-                        {/* <View style={venkyStyles.thirdViewLeftSide}>
-                            <Text style={venkyStyles.noOfFollowrs}>250</Text>
-                            <Text style={venkyStyles.Followrs}>Followers</Text>
-                        </View>
-                        <View style={venkyStyles.thirdViewRightSide}>
-                            <Text style={venkyStyles.noOfFollowrs}>150</Text>
-                            <Text style={venkyStyles.Followrs}>Following</Text>
-                        </View> */}
+                        {renderPostDetails(venkyStyles.thirdViewLeftSide, 250, 'Followers')}
+                        {renderPostDetails(venkyStyles.thirdViewRightSide, 150, 'Following')}
                     </View>
-
-
                     <View style={venkyStyles.fourthView}>
                         <TouchableHighlight style={venkyStyles.buttonStyles}
-                            // title="FOLLOW"
                             onPress={() => Alert.alert('Thank you for following...')}
                         >
                             <Text style={venkyStyles.buttonText}>Follow</Text>
@@ -98,23 +89,15 @@ var venkyStyles = StyleSheet.create({
     firstView: {
         flexDirection: "row",
         flex: 4,
-        // backgroundColor: 'black'
     },
     secondView: {
         flex: 1,
-        // backgroundColor: 'red'
     },
-    name: {
-        marginTop: 20,
+    personDetail: {
+        marginTop: 2,
         textAlign: 'center',
         fontSize: 20,
         fontWeight: 'bold'
-    },
-    place: {
-        marginTop: 2,
-        textAlign: 'center',
-        fontSize: 15,
-        fontWeight: '400'
     },
     thirdView: {
         flexDirection: 'row',
@@ -175,9 +158,6 @@ var venkyStyles = StyleSheet.create({
         flex: 1,
         //backgroundColor: 'lightyellow'
     }
-
-
-
 
 
 })

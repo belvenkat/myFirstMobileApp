@@ -7,9 +7,9 @@ import { render } from 'react-dom';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-function renderImage(imagePath, imageStyle, layer) {
+function renderImage(imagePath, imageStyle) {
     return (
-        <View style={venkyStyles.firstImage}>
+        <View style={venkyStyles.image}>
             <Image
                 style={imageStyle}
                 source={{
@@ -32,9 +32,6 @@ function renderPostDetails(iconName,clicksCount,countDetailsOfPost) {
     )
 }
 
-
-
-
 export default function SecondUiSampleCard() {
     return (
         <View style={venkyStyles.container}>
@@ -48,9 +45,9 @@ export default function SecondUiSampleCard() {
                     </View>
                 </View>
                 <View style={venkyStyles.mainContainerSecondLayer}>
-                    {renderImage('https://banknotecoinstamp.com/bncs-content/uploads/2019/10/94-2.jpg', venkyStyles.tinyLogo, venkyStyles.firstImage)}
-                    {renderImage('https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png', venkyStyles.tinyLogo, venkyStyles.secondImage)}
-                    {renderImage('https://en.numista.com/catalogue/photos/inde/3205-original.jpg', venkyStyles.tinyLogo, venkyStyles.thirdImage)}
+                    {renderImage('https://banknotecoinstamp.com/bncs-content/uploads/2019/10/94-2.jpg', venkyStyles.tinyLogo)}
+                    {renderImage('https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png', venkyStyles.tinyLogo)}
+                    {renderImage('https://en.numista.com/catalogue/photos/inde/3205-original.jpg', venkyStyles.tinyLogo)}
 
                 </View>
                 <View style={venkyStyles.mainContainerThirdLayer}>
@@ -85,32 +82,6 @@ export default function SecondUiSampleCard() {
                         { renderPostDetails('mouse-pointer',83,'Clicks')}
                         { renderPostDetails('share','2.3k','Shares')}
                         { renderPostDetails('commenting-o',4,'Comments')}
-                    {/* <View style={venkyStyles.postDetailsContainer}>
-                        <View style={venkyStyles.postCountContainer}>
-                            <Icon style={venkyStyles.iconStyles} name="mouse-pointer" size={25}></Icon>
-                            <Text style={venkyStyles.countText}>83</Text>
-                        </View>
-                        <Text style={venkyStyles.countDetail}>Clicks</Text>
-                    </View>
-
-                    <View style={venkyStyles.postDetailsContainer}>
-                        <View style={venkyStyles.postCountContainer}>
-                            <Icon style={venkyStyles.iconStyles} name="share" size={25}></Icon>
-                            <Text style={venkyStyles.countText}>2.3K</Text>
-                        </View>
-                        <Text style={venkyStyles.countDetail}>Shares</Text>
-                    </View>
-
-
-                    <View style={venkyStyles.postDetailsContainer}>
-                        <View style={venkyStyles.postCountContainer}>
-                            <Icon style={venkyStyles.iconStyles} name="commenting-o" size={25}></Icon>
-                            <Text style={venkyStyles.countText}>4</Text>
-                        </View>
-                        <Text style={venkyStyles.countDetail}>Comments</Text>
-                    </View> */}
-
-
                 </View>
             </View>
         </View>
@@ -151,23 +122,11 @@ var venkyStyles = StyleSheet.create({
         flex: 1,
         // backgroundColor: 'blue'
     },
-    firstImage: {
+    image: {
         justifyContent: 'center',
         alignItems: 'center',
         flex: 1,
         // backgroundColor: 'red'
-    },
-    secondImage: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        flex: 1,
-        // backgroundColor: 'tan'
-    },
-    thirdImage: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        flex: 1,
-        //backgroundColor: 'lightblue'
     },
     mainContainerThirdLayer: {
         flex: 1,
