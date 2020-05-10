@@ -32,7 +32,7 @@ function PetCard() {
                             <View style={styles.petCardFirstLayerPartition}>
                                 <TouchableOpacity
                                     onPress={() => {
-                                        alert('Click here for more Details');
+                                        Alert.alert('Click here for more Details');
                                     }}
                                 >
                                     <ImageBackground
@@ -57,9 +57,14 @@ function PetCard() {
                         </View>
                     </View>
                     <View style={styles.petCardThirdLayer}>
-                        <View style={styles.buttonStyle}>
-                            <Text style={styles.thirdLayerTextstyle}>Click here for Vaccination Details</Text>
-                        </View>
+                        <TouchableOpacity
+                            onPress={() => {
+                                Alert.alert('Thank you');
+                            }}>
+                            <View style={styles.buttonStyle}>
+                                <Text style={styles.thirdLayerTextstyle}>Click here for Vaccination Details</Text>
+                            </View>
+                        </TouchableOpacity>
                     </View>
                 </View>
             </ImageBackground>
@@ -133,5 +138,5 @@ var styles = StyleSheet.create({
         borderRadius: 25,
         borderWidth: 2
     },
-   
+
 })
