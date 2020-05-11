@@ -1,11 +1,22 @@
-{
-    "bone":"https://i.ibb.co/XY1BvmG/png-bone.png",
-    "backGroundPhotoUrl":"https://i.ibb.co/py0zRdW/b4.jpg",
-    "petPhotoUrl":"https://i.ibb.co/Hr1sVyk/dolly.jpg",
-    "Name": "Dolly",
-    "Breed": "Labrador Retriever",
-    "age": "18 Months",
-    "lifeSpan": "10 – 14 years",
-    "gender": "Female",
-    "favoriteFood": "Pedigree chicken chunks"
-}
+[
+    {
+        "Vaccination":"Dewroming",
+        "PetPhotoUrl": "https://i.ibb.co/Hr1sVyk/dolly.jpg",
+        "Name": "Dolly",
+        "Breed": "Labrador Retriever",
+        "Age": "18 Months",
+        "LifeSpan": "10 – 14 years",
+        "Gender": "Female",
+        "FavoriteFood": "Pedigree chicken chunks"
+    },
+    {
+        "Vaccination":"7 IN ONE",
+        "PetPhotoUrl": "https://i.ibb.co/Hr1sVyk/dolly.jpg",
+        "Name": "Rocky",
+        "Breed": "Labrador Retriever",
+        "Age": "20 Months",
+        "LifeSpan": "10 – 14 years",
+        "Gender": "male",
+        "FavoriteFood": "Pedigree"
+    }
+]
